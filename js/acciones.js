@@ -13,7 +13,7 @@ function login(U,P){
 		url: "http://192.168.1.69/Biblioteca_/Log_in_m.php",
 		data: datos
 	}).done(function(msg) {
-//		alert (msg);
+		alert (msg);
 
         if(msg == "" || msg == null)
          {
