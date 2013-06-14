@@ -2,7 +2,7 @@
 //MiApp
 //{
 	
-	//var ID_Usuario = "";
+	var ID_Usuario = "";
 	
 function login(U,P){
 	datos = "usuario="+U+"&password="+P;
@@ -20,9 +20,9 @@ function login(U,P){
         else
          {
 	      var OUsuario = jQuery.parseJSON(msg);
-//          ID_Usuario = OUsuario.Usuario;
-		  alert ("Bienvenido" );
-		  
+        ID_Usuario = OUsuario.Usuario;
+		  alert ("Bienvenido" + ID_Usuario);
+		  location.href = "#Busqueda"
          }
 
 	});
