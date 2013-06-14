@@ -6,8 +6,6 @@ MiApp
 	
 function login(U,P){
 	datos = "usuario="+U+"&password="+P;
-	alert (U);
-	alert (P);
 	$.ajax({
 		type: "POST",
 		url: "http://192.168.1.69/Biblioteca_/Log_in_m.php",
@@ -41,6 +39,8 @@ alert (formulario.attr('name'));
 			case 'log':
 var usuario = document.getElementById('Usuario').value;
 var password = document.getElementById('Password').value;
+alert (usuario);
+alert (password);
 		//	var usuario = $('input[Usuario]').val();
 		//	var password = formulario.children('input:eq(1)').val();
 login(usuario,password);
