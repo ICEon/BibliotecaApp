@@ -1,14 +1,14 @@
 // JavaScript Document
-MiApp
-{
+//MiApp
+//{
 	
-	var ID_Usuario = "";
+	//var ID_Usuario = "";
 	
 function login(U,P){
 	datos = "usuario="+U+"&password="+P;
 	$.ajax({
 		type: "POST",
-		url: "http://192.168.1.69/Biblioteca_/Log_in_m.php",
+		url: "http://192.168.1.193/Biblioteca_/Log_in_m.php",
 		data: datos
 	}).done(function(msg) {
 		alert (msg);
@@ -20,8 +20,8 @@ function login(U,P){
         else
          {
 	      var OUsuario = jQuery.parseJSON(msg);
-          ID_Usuario = OUsuario.Usuario;
-		  alert ("Bienvenido" + ID_Usuario);
+//          ID_Usuario = OUsuario.Usuario;
+		  alert ("Bienvenido" );
 		  
          }
 
@@ -53,4 +53,3 @@ login(usuario,password);
 	});//tap	
 	});//device
 });//document
-}
