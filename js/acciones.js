@@ -23,6 +23,7 @@ function login(U,P){
         ID_Usuario = OUsuario.Usuario;
 		  alert ("Bienvenido" + ID_Usuario);
 		  location.href = "#Busqueda"
+		  $('.NombreUsuario').append('<p>' + ID_Usuario +'</p>');
          }
 
 	});
