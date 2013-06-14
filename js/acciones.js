@@ -20,10 +20,11 @@ function login(U,P){
         else
          {
 	      var OUsuario = jQuery.parseJSON(msg);
-        ID_Usuario = OUsuario.Usuario;
-		  alert ("Bienvenido" + ID_Usuario);
+          ID_Usuario = OUsuario.Usuario;
+		  alert ("Bienvenido" + ID_Usuario);		  
 		  location.href = "#Busqueda"
-		  $('.NombreUsuario').append('<p>' + ID_Usuario +'</p>');
+		  $('.NombreUsuario').append('<p align="center">' + ID_Usuario +'</p>');
+		  
          }
 
 	});
@@ -32,24 +33,28 @@ function login(U,P){
 
 $(document).ready(function(e) {
     document.addEventListener("deviceready", function(){
-		alert ("listo");
+//		alert ("listo");
 			$('.Enviar').tap(function(){
 		var formulario = $(this).parents('form');
-alert (formulario.attr('name'));
+//alert (formulario.attr('name'));
 	switch(formulario.attr('name'))
 	{
 			case 'log':
 var usuario = document.getElementById('Usuario').value;
 var password = document.getElementById('Password').value;
 alert (usuario);
-alert (password);
+//alert (password);
 		//	var usuario = $('input[Usuario]').val();
 		//	var password = formulario.children('input:eq(1)').val();
 login(usuario,password);
 
 				break;	
 
+case 'buscar':
+var busqueda = document.getElementById('BTitulo').value;
+alert (busqueda);
 
+break;
 		}
 	});//tap	
 	});//device
