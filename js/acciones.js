@@ -31,6 +31,7 @@ function login(U,P){
 
 $(document).ready(function(e) {
     document.addEventListener("deviceready", function(){
+		alert ("listo");
 			$('.Enviar').tap(function(){
 		var formulario = $(this).parents('form');
 alert (formulario.attr('name'));
