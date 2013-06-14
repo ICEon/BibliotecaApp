@@ -8,7 +8,7 @@ function login(U,P){
 	datos = "usuario="+U+"&password="+P;
 	$.ajax({
 		type: "POST",
-		url: "http://192.168.1.193/Biblioteca_/Log_in_m.php",
+		url: "http://192.168.1.11/Biblioteca_/Log_in_m.php",
 		data: datos
 	}).done(function(msg) {
 		alert (msg);
