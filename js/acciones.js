@@ -22,7 +22,7 @@ function login(U,P){
 	      var OUsuario = jQuery.parseJSON(msg);
           ID_Usuario = OUsuario.Usuario;
 		  alert ("Bienvenido" + ID_Usuario);		  
-		  location.href = "#Busqueda"
+		  location.href = "#Busqueda";
 		  $('.NombreUsuario').append('<p align="center">' + ID_Usuario +'</p>');
 		  
          }
