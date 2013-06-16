@@ -26,7 +26,7 @@ function login(U,P){
 		  alert ("Bienvenido" + ID_Usuario);		  
 	
 	
-		  window.location = liga + "#Busqueda";
+		  window.location.href = liga + "#Busqueda";
 		  $('.NombreUsuario').append('<p align="center">' + ID_Usuario +'</p>');
 		  alert(document.location.href);
          
