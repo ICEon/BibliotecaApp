@@ -3,7 +3,7 @@
 //{
 	
 	var ID_Usuario = "";
-	
+        var liga = document.location.href;
 function login(U,P){
 	datos = "usuario="+U+"&password="+P;
 	$.ajax({
@@ -20,18 +20,15 @@ function login(U,P){
          }
         else
          {
-         	alert ($browser.baseHref());
+         //	alert ($browser.baseHref());
 	      var OUsuario = jQuery.parseJSON(msg);
           ID_Usuario = OUsuario.Usuario;
 		  alert ("Bienvenido" + ID_Usuario);		  
-		  var liga = document.location.href;
-		  document.location.href = "#Busqueda";
-		  alert(document.location.href);
-		  alert (navigator.appCodeName);
-		  $('.NombreUsuario').append('<p align="center">' + ID_Usuario +'</p>');
-		  
+	
+	
 		  window.location = liga + "#Busqueda";
-		  	  alert(document.location.href);
+		  $('.NombreUsuario').append('<p align="center">' + ID_Usuario +'</p>');
+		  alert(document.location.href);
          
 		  
          }
