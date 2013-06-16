@@ -8,7 +8,7 @@ function login(U,P){
 	datos = "usuario="+U+"&password="+P;
 	$.ajax({
 		type: "POST",
-		url: "http://192.168.1.11/Biblioteca_/Log_in_m.php",
+		url: "http://192.168.1.69/Biblioteca_/Log_in_m.php",
 		data: datos
 	}).done(function(msg) {
 		alert (msg);
@@ -22,7 +22,7 @@ function login(U,P){
 	      var OUsuario = jQuery.parseJSON(msg);
           ID_Usuario = OUsuario.Usuario;
 		  alert ("Bienvenido" + ID_Usuario);		  
-		  document.location.href = "document.location.href" + "#Busqueda";
+		  document.location.href = "#Busqueda";
 		  alert(document.location.href);		  
 		  $('.NombreUsuario').append('<p align="center">' + ID_Usuario +'</p>');
 		  
