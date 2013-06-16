@@ -23,7 +23,12 @@
   
   <!-- Mis acciones -->
   <script src="js/acciones.js"></script>
-   
+              <script>
+function miFuncion()
+{
+location.href = "#Busqueda";
+}
+</script>   
 </head>
 <body>
 <!-- Home -->
@@ -45,6 +50,10 @@
         <input id="Entrar" type="submit" data-icon="check" data-iconpos="right"
         value="Entrar" class="Enviar">
       </form>
+
+      <input id="Entrar" type="submit" data-icon="check" data-iconpos="right"
+        value="Entrar" onClick="miFuncion()" >
+
     </div>
 </div>
 
