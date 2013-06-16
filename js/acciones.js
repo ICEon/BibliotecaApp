@@ -22,7 +22,8 @@ function login(U,P){
 	      var OUsuario = jQuery.parseJSON(msg);
           ID_Usuario = OUsuario.Usuario;
 		  alert ("Bienvenido" + ID_Usuario);		  
-		  location.href = "#Busqueda";
+		  document.location.href = "#Busqueda";
+		  //document.location.hash 
 		  $('.NombreUsuario').append('<p align="center">' + ID_Usuario +'</p>');
 		  
          }
@@ -40,6 +41,7 @@ $(document).ready(function(e) {
 	switch(formulario.attr('name'))
 	{
 			case 'log':
+				alert(document.location.hash);
 var usuario = document.getElementById('Usuario').value;
 var password = document.getElementById('Password').value;
 alert (usuario);
