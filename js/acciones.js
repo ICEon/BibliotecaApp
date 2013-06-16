@@ -23,7 +23,8 @@ function login(U,P){
           ID_Usuario = OUsuario.Usuario;
 		  alert ("Bienvenido" + ID_Usuario);		  
 		  document.location.href = "#Busqueda";
-		  alert(document.location.href);		  
+		  alert(document.location.href);
+		  alert (navigator.appCodeName);
 		  $('.NombreUsuario').append('<p align="center">' + ID_Usuario +'</p>');
 		  
          }
