@@ -17,23 +17,22 @@ function login(U,P){
         if(msg == "*" || msg == null)
          {
           alert ("Nombre de usuario y/o password incorrecto");
+          return false;
          }
         else
          {
          //	alert ($browser.baseHref());
 	      var OUsuario = jQuery.parseJSON(msg);
           ID_Usuario = OUsuario.Usuario;
-		  alert ("Bienvenido" + ID_Usuario);		  
-	
+		 
 	//document.location.href = "";
 		  //window.location.href = liga + "#Busqueda";
-		  $.mobile.changePage( "index.html#Busqueda");
-		  $('.NombreUsuario').append('<p align="center">' + ID_Usuario +'</p>');
+		  
 		  //alert(document.location.href);
          
-		  
+		  return true;
          }
-
+return false;
 	});
  } //login
 
@@ -54,8 +53,13 @@ var password = document.getElementById('Password').value;
 //alert (password);
 		//	var usuario = $('input[Usuario]').val();
 		//	var password = formulario.children('input:eq(1)').val();
-login(usuario,password);
-alert ("hola");
+if (login(usuario,password))
+{
+
+alert ("Bienvenido" + ID_Usuario);		  
+	$.mobile.changePage( "index.html#Busqueda");
+		  $('.NombreUsuario').append('<p align="center">' + ID_Usuario +'</p>');
+}
 				break;	
 
 case 'buscar':
