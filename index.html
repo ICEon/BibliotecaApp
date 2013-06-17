@@ -23,12 +23,7 @@
   
   <!-- Mis acciones -->
   <script src="js/acciones.js"></script>
-              <script>
-function miFuncion()
-{
-location.href = "#Busqueda";
-}
-</script>   
+   
 </head>
 <body>
 <!-- Home -->
@@ -51,9 +46,6 @@ location.href = "#Busqueda";
         value="Entrar" class="Enviar">
       </form>
 
-      <input id="Entrar" type="submit" data-icon="check" data-iconpos="right"
-        value="Entrar" onClick="miFuncion()" >
-
     </div>
 </div>
 
@@ -64,14 +56,20 @@ location.href = "#Busqueda";
             Consulta de Libros
         </h3>
     </div>
-    <div class="NombreUsuario">
-    
+    <div class="NombreUsuario">    
     </div>
     <div data-role="content">
         <div data-role="fieldcontain">
         <form name="buscar">
-            <input name="BTitulo" id="BTitulo" placeholder="Titulo" value="" type="search" class="Enviar">
+
+            <input name="BTitulo" id="BTitulo" placeholder="Titulo" value="" >
+                    <input id="Buscar" type="submit" value="Buscar" class="Enviar">
             </form>
+        </div>
+        <br>
+        <div class="resultados">
+
+        
         </div>
     </div>
 </div>
