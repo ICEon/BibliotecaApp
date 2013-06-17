@@ -19,7 +19,7 @@
          {
 //alert (msg);
 	      var OLibro = jQuery.parseJSON(msg);
-          
+          alert (OLibro);
 //		  for (i=1 to OUsuario.length
 		  
 				alert (OLibro.libros[1].Titulo);
