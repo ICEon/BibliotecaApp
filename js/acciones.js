@@ -12,9 +12,9 @@ function login(U,P){
 		data: datos
 	}).done(function(msg) {
 		
-		alert (msg);
+//		alert (msg);
 
-        if(msg == "" || msg == null)
+        if(msg == "*" || msg == null)
          {
           alert ("Nombre de usuario y/o password incorrecto");
          }
@@ -27,13 +27,9 @@ function login(U,P){
 	
 	//document.location.href = "";
 		  //window.location.href = liga + "#Busqueda";
-		  $.mobile.changePage( "#Busqueda", {
-    transition: "pop",
-    reverse: false,
-    changeHash: false
-});
+		  $.mobile.changePage( "#Busqueda");
 		  $('.NombreUsuario').append('<p align="center">' + ID_Usuario +'</p>');
-		  alert(document.location.href);
+		  //alert(document.location.href);
          
 		  
          }
@@ -51,10 +47,10 @@ $(document).ready(function(e) {
 	switch(formulario.attr('name'))
 	{
 			case 'log':
-				alert(document.location.href);
+				//alert(document.location.href);
 var usuario = document.getElementById('Usuario').value;
 var password = document.getElementById('Password').value;
-alert (usuario);
+//alert (usuario);
 //alert (password);
 		//	var usuario = $('input[Usuario]').val();
 		//	var password = formulario.children('input:eq(1)').val();
