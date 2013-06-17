@@ -17,12 +17,12 @@
          }
         else
          {
-alert (msg);
+//alert (msg);
 	      var OLibro = jQuery.parseJSON(msg);
           
 //		  for (i=1 to OUsuario.length
 		  
-		alert (OLibro.length);
+				alert (OLibro.libros[1].Titulo);
 		  
 	//	  $('.Resultados').append('<p align="center">' + ID_Usuario +'</p>');
 		  
