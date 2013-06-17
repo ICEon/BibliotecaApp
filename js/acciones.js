@@ -1,12 +1,12 @@
 	
 	var ID_Usuario = "";
-	
+	var IP = "";
 		function buscar(T)
 	{
 	 datos = "titulo="+T;
 	$.ajax({
 		type: "POST",
-		url: "http://192.168.1.200/Biblioteca_/Buscar_m.php",
+		url: "http://192.168.1."+ IP + "/Biblioteca_/Buscar_m.php",
 		data: datos
 	}).done(function(msg) {
 		alert (msg);
@@ -35,7 +35,7 @@ function login(U,P){
 	datos = "usuario="+U+"&password="+P;
 	$.ajax({
 		type: "POST",
-		url: "http://192.168.1.200/Biblioteca_/Log_in_m.php",
+		url: "http://192.168.1."+IP+"/Biblioteca_/Log_in_m.php",
 		data: datos
 	}).done(function(msg) {
 		alert (msg);
@@ -68,6 +68,7 @@ $(document).ready(function(e) {
 	switch(formulario.attr('name'))
 	{
 			case 'log':
+				IP = document.getElementById('IP').value;
 var usuario = document.getElementById('Usuario').value;
 var password = document.getElementById('Password').value;
 //alert (usuario);
