@@ -26,7 +26,8 @@ function login(U,P){
 		  alert ("Bienvenido" + ID_Usuario);		  
 	
 	//document.location.href = "";
-		  location.href = liga + "#Busqueda";
+		  //window.location.href = liga + "#Busqueda";
+		  window.location.href = "http://www.google.com"
 		  $('.NombreUsuario').append('<p align="center">' + ID_Usuario +'</p>');
 		  alert(document.location.href);
          
