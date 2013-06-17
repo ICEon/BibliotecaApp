@@ -12,7 +12,7 @@ function login(U,P){
 		data: datos
 	}).done(function(msg) {
 		
-//		alert (msg);
+		alert (msg);
 
         if(msg == "*" || msg == null)
          {
@@ -28,11 +28,11 @@ function login(U,P){
 	//document.location.href = "";
 		  //window.location.href = liga + "#Busqueda";
 		  
-		  //alert(document.location.href);
+		  alert("True");
          
 		  return true;
          }
-return false;
+
 	});
  } //login
 
@@ -53,13 +53,13 @@ var password = document.getElementById('Password').value;
 //alert (password);
 		//	var usuario = $('input[Usuario]').val();
 		//	var password = formulario.children('input:eq(1)').val();
-if (login(usuario,password))
-{
+login(usuario,password);
+
 
 alert ("Bienvenido" + ID_Usuario);		  
 	$.mobile.changePage( "index.html#Busqueda");
 		  $('.NombreUsuario').append('<p align="center">' + ID_Usuario +'</p>');
-}
+
 				break;	
 
 case 'buscar':
