@@ -1,51 +1,31 @@
-// JavaScript Document
-//MiApp
-//{
 	
 	var ID_Usuario = "";
-        var liga = document.location.href;
-function login(U,P){
 	
-
-    if (this.readyState == 4) {
-    	
-    	datos = "usuario="+U+"&password="+P;
+function login(U,P){
+	datos = "usuario="+U+"&password="+P;
 	$.ajax({
 		type: "POST",
-		url: "http://192.168.1.69/Biblioteca_/Log_in_m.php",
+		url: "http://192.168.1.200/Biblioteca_/Log_in_m.php",
 		data: datos
 	}).done(function(msg) {
-		
 		alert (msg);
 
-        if(msg == "*" || msg == null)
+        if(msg == "" || msg == null)
          {
           alert ("Nombre de usuario y/o password incorrecto");
-          
          }
         else
          {
-         //	alert ($browser.baseHref());
 	      var OUsuario = jQuery.parseJSON(msg);
           ID_Usuario = OUsuario.Usuario;
-		 
-	//document.location.href = "";
-		  //window.location.href = liga + "#Busqueda";
+		  alert ("Bienvenido" + ID_Usuario);		  
 		  
-		  alert("True");
-         
-	
+		  $.mobile.changePage( "index.html#Busqueda");
+		  $('.NombreUsuario').append('<p align="center">' + ID_Usuario +'</p>');
+		  
          }
 
 	});
-        
-        
-        
-    }
-    else {
-        alert ("cargando");
-    }
-	
  } //login
 
 
@@ -58,7 +38,6 @@ $(document).ready(function(e) {
 	switch(formulario.attr('name'))
 	{
 			case 'log':
-				//alert(document.location.href);
 var usuario = document.getElementById('Usuario').value;
 var password = document.getElementById('Password').value;
 //alert (usuario);
@@ -66,11 +45,6 @@ var password = document.getElementById('Password').value;
 		//	var usuario = $('input[Usuario]').val();
 		//	var password = formulario.children('input:eq(1)').val();
 login(usuario,password);
-
-
-alert ("Bienvenido" + ID_Usuario);		  
-	$.mobile.changePage( "index.html#Busqueda");
-		  $('.NombreUsuario').append('<p align="center">' + ID_Usuario +'</p>');
 
 				break;	
 
