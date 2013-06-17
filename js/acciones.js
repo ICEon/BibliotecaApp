@@ -17,11 +17,12 @@
          }
         else
          {
-	      var OUsuario = jQuery.parseJSON(msg);
+alert (msg);
+	      var OLibro = jQuery.parseJSON(msg);
           
 //		  for (i=1 to OUsuario.length
 		  
-		alert (OUsuario.length);
+		alert (OLibro.length);
 		  
 	//	  $('.Resultados').append('<p align="center">' + ID_Usuario +'</p>');
 		  
