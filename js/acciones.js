@@ -1,6 +1,35 @@
 	
 	var ID_Usuario = "";
 	
+		function buscar(T)
+	{
+	 datos = "titulo="+T;
+	$.ajax({
+		type: "POST",
+		url: "http://192.168.1.200/Biblioteca_/Buscar_m.php",
+		data: datos
+	}).done(function(msg) {
+		alert (msg);
+
+        if(msg == "*" || msg == null)
+         {
+          alert ("No se econtraron titulos con ese nombre");
+         }
+        else
+         {
+	      var OUsuario = jQuery.parseJSON(msg);
+          
+//		  for (i=1 to OUsuario.length
+		  
+		alert (OUsuario.length);
+		  
+	//	  $('.Resultados').append('<p align="center">' + ID_Usuario +'</p>');
+		  
+         }
+
+	});	 	
+	}
+	
 function login(U,P){
 	datos = "usuario="+U+"&password="+P;
 	$.ajax({
@@ -49,8 +78,10 @@ login(usuario,password);
 				break;	
 
 case 'buscar':
-var busqueda = document.getElementById('BTitulo').value;
-alert (busqueda);
+var titulo = document.getElementById('BTitulo').value;
+alert (titulo);
+buscar(titulo);
+
 
 break;
 		}
