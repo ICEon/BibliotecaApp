@@ -69,6 +69,7 @@ $(document).ready(function(e) {
 	{
 			case 'log':
 				IP = document.getElementById('IP').value;
+				alert (IP);
 var usuario = document.getElementById('Usuario').value;
 var password = document.getElementById('Password').value;
 //alert (usuario);
