@@ -27,7 +27,7 @@ function login(U,P){
 	
 	//document.location.href = "";
 		  //window.location.href = liga + "#Busqueda";
-		  $.mobile.changePage( "#Busqueda");
+		  $.mobile.changePage( "index.html#Busqueda");
 		  $('.NombreUsuario').append('<p align="center">' + ID_Usuario +'</p>');
 		  //alert(document.location.href);
          
