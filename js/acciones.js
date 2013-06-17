@@ -55,7 +55,7 @@ var password = document.getElementById('Password').value;
 		//	var usuario = $('input[Usuario]').val();
 		//	var password = formulario.children('input:eq(1)').val();
 login(usuario,password);
-
+alert ("hola");
 				break;	
 
 case 'buscar':
