@@ -5,7 +5,11 @@
 	var ID_Usuario = "";
         var liga = document.location.href;
 function login(U,P){
-	datos = "usuario="+U+"&password="+P;
+	
+
+    if (this.readyState == 4) {
+    	
+    	datos = "usuario="+U+"&password="+P;
 	$.ajax({
 		type: "POST",
 		url: "http://192.168.1.69/Biblioteca_/Log_in_m.php",
@@ -17,7 +21,7 @@ function login(U,P){
         if(msg == "*" || msg == null)
          {
           alert ("Nombre de usuario y/o password incorrecto");
-          return false;
+          
          }
         else
          {
@@ -30,10 +34,18 @@ function login(U,P){
 		  
 		  alert("True");
          
-		  return true;
+	
          }
 
 	});
+        
+        
+        
+    }
+    else {
+        alert ("cargando");
+    }
+	
  } //login
 
 
